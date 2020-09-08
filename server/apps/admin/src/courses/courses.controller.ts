@@ -19,7 +19,7 @@ export class CoursesController {
         return {
             index: true,
             indexLabel: '序号',
-            title: "课程视频",
+            title: "资讯分类",
            
             searchShow:false,
             align: "center",
@@ -36,16 +36,16 @@ export class CoursesController {
                     //自定义搜索正则
                     regex:true,
                 },
-                {
-                    label: "封面",
-                    prop: "cover",
-                    type: 'upload',
-                    width:'120',
-                    span: 24,
-                    listType: 'picture-img',
-                    tip: '只能上传jpg/png文件，且不超过500kb',
-                    action: '/imgupload'
-                },
+                // {
+                //     label: "封面",
+                //     prop: "cover",
+                //     type: 'upload',
+                //     width:'120',
+                //     span: 24,
+                //     listType: 'picture-img',
+                //     tip: '只能上传jpg/png文件，且不超过500kb',
+                //     action: '/imgupload'
+                // },
            
             ]
         };

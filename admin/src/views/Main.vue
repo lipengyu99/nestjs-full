@@ -43,12 +43,16 @@ export default class Main extends Vue {
           },
        
           {
-            title: "课程管理",
+            title: "资讯分类",
             path: "/courses/list"
           },
           {
-            title: "课时管理",
+            title: "资讯详情",
             path: "/episodes/list"
+          },
+          {
+            title:'意向用户',
+            path:'/hidden/list'
           }
         ]
       },

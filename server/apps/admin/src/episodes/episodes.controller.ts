@@ -25,14 +25,14 @@ export class EpisodesController {
         return {
             index: true,
             indexLabel: '序号',
-            title: "课时管理",
+            title: "资讯详情",
             
             align: "center",
             menuAlign: "center",
             translate:false,
             column: [
                 {
-                    label: "所属课程",
+                    label: "所属分类",
                     prop: "course",
                     type:"select",
                     span:24,
@@ -40,23 +40,48 @@ export class EpisodesController {
                 },
                 {
                     sortable: true,
-                    label: "名称",
+                    label: "标题",
                     prop: "name",
                     span:24,
                 },
+                // {
+                //     label: "文件",
+                //     prop: "file",
+                //     type: 'upload',
+                //     params: {
+                //         is: 'video'
+                //     },
+                //     width: '120',
+                //     span: 24,
+                //     listType: 'picture-img',
+                //     tip: '只能上传jpg/png文件，且不超过500kb',
+                //     action: '/imgupload'
+                // },
                 {
-                    label: "文件",
-                    prop: "file",
+                    label: "封面",
+                    prop: "cover",
                     type: 'upload',
-                    params: {
-                        is: 'video'
-                    },
-                    width: '120',
+                    width:'120',
                     span: 24,
                     listType: 'picture-img',
                     tip: '只能上传jpg/png文件，且不超过500kb',
                     action: '/imgupload'
                 },
+                {
+                    label: '导语',
+                    prop: 'input',
+                    span:24,
+                    maxlength: 25,
+                    showWordLimit: true
+                }, {
+                    label: '正文',
+                    prop: 'textarea',
+                    type: 'textarea',
+                    minRows: 10,
+                    maxlength: 200,
+                    span: 24,
+                    showWordLimit: true
+                }
                 
             ]
         };

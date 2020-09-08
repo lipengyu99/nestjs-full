@@ -7,15 +7,23 @@ import { Course } from "@libs/db/models/course.model";
     }
 })
 export class Episode {
-    @ApiProperty({description:'名称'})
+    @ApiProperty({description:'标题'})
     @prop()
     name:string;
 
-    @ApiProperty({ description: '文件' })
+    @ApiProperty({ description: '封面' })
     @prop()
-    file:string;
+    cover:string;
+   
+    @ApiProperty({ description: '导语' })
+    @prop()
+    input: string;
+
+    @ApiProperty({ description: '正文' })
+    @prop()
+    textarea: string;
     
-    @ApiProperty({ description: '所属课程' })
+    @ApiProperty({ description: '所属分类' })
     @prop({ref:'Course'})
     course:Ref<Course>
 
