@@ -9,7 +9,7 @@ import { Course } from '@libs/db/models/course.model';
     model: Episode
 })
 @Controller('episodes')
-@ApiTags('课时管理')
+    @ApiTags('资讯详情')
 export class EpisodesController {
     constructor(@InjectModel(Episode) private model:ModelType<Episode>,
         @InjectModel(Course) private coursemodel: ReturnModelType<typeof Course>){
@@ -77,6 +77,7 @@ export class EpisodesController {
                     label: '正文',
                     prop: 'textarea',
                     type: 'textarea',
+                    formslot: true,
                     minRows: 10,
                     maxlength: 200,
                     span: 24,

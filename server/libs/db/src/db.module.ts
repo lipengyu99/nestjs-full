@@ -5,10 +5,10 @@ import { User } from '@libs/db/models/user.model';
 import { Course } from '@libs/db/models/course.model';
 import { Episode } from '@libs/db/models/episode.model';
 import { Hidden } from '@libs/db/models/hidden.model';
-import { News } from '@libs/db/models/news.model';
+
 
 const models = TypegooseModule.forFeature([
-  User,Course,Episode,Hidden,News
+  User,Course,Episode,Hidden
 ])
 
 @Global()

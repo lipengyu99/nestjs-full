@@ -27,13 +27,13 @@ export class HiddenController {
             menuAlign: "center",
             column: [
                 {
-
                     //sortable: true,
                     label: "姓名",
                     prop: "name",
                     //span: 24,
-                    
+                    editDisabled: true  
                 },
+                
                 {
                     label: "手机",
                     prop: "phone",
@@ -41,14 +41,17 @@ export class HiddenController {
                 },
                 {
                     label:"年级",
-                    prop:"grade"
+                    prop:"grade",
+                    editDisabled: true
+                    
                 },
                 {
                     label: "日期",
-                    prop: "date",
+                    prop: "createdAt",
                     type: "date",
                     format: "yyyy-MM-dd hh:mm:ss",
                     valueFormat: "yyyy-MM-dd hh:mm:ss",
+                    editDisabled: true
                 },
                 {
                     label:"跟进状态",
@@ -56,9 +59,33 @@ export class HiddenController {
                     type:"select",
                     //dicData:DIC.VAILD,
                 },
+                // {
+                //     labelWidth: 0,
+                //     label: '',
+                //     prop: 'info',
+                //     span: 24,
+                //     hide: true,
+                //     formslot: true,
+                // },
                 
 
-            ]
+            ],
+            // infoOption: {
+            //     column: [{
+            //         label: '年龄',
+            //         prop: 'sex',
+            //     }]
+            // }
         };
+        
     }
+    // @Get('InfoOption')
+    // InfoOption(){
+    //     return {
+    //         column: [{
+    //                 label: '年龄',
+    //                 prop: 'grade',
+    //             }]
+    //     }
+    // }
 }

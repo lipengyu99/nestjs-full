@@ -9,7 +9,7 @@ import { prop } from '@typegoose/typegoose';
     model: Course
 })
 @Controller('courses')
-@ApiTags('课程视频')
+    @ApiTags('资讯分类')
 export class CoursesController {
     constructor(@InjectModel(Course) public model:ReturnModelType<typeof Course>){
 
